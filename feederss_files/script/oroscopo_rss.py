@@ -61,24 +61,26 @@ def estrai_oroscopo(html, segno, tipo):
     """Estrae i dati dell'oroscopo dall'HTML"""
     soup = BeautifulSoup(html, 'html.parser')
     
-    # Estrazione del titolo dal meta tag o title tag
+    # Estrazione del titolo dal meta tag con itemprop="name"
     title_tag = soup.find('meta', attrs={'itemprop': 'name'})
     if title_tag and title_tag.get('content'):
         titolo = title_tag.get('content')
     else:
-        # Fallback: cerca h1 con classe title-art
-        h1_tag = soup.find('h1', class_='title-art')
-        if h1_tag:
-            titolo = h1_tag.get_text(strip=True)
+        # Fallback: cerca il title tag HTML standard
+        title_tag = soup.find('title')
+        if title_tag:
+            titolo = title_tag.get_text(strip=True)
         else:
-            # Ulteriore fallback: cerca title tag
-            title_tag = soup.find('title')
-            titolo = title_tag.get_text(strip=True) if title_tag else f"Oroscopo {segno.capitalize()} - {tipo.capitalize()}"
+            # Ulteriore fallback: cerca h1 con classe title-art
+            h1_tag = soup.find('h1', class_='title-art')
+            titolo = h1_tag.get_text(strip=True) if h1_tag else f"Oroscopo {segno.capitalize()} - {tipo.capitalize()}"
     
     # Aggiungi il periodo di nascita al titolo
     periodo = PERIODI_NASCITA.get(segno, "")
-    if periodo and "(21/3 - 19/4)" not in titolo:  # Evita duplicati
-        titolo = f"{titolo} ({periodo})"
+    if periodo:
+        # Rimuovi eventuali parentesi duplicate
+        if not titolo.endswith(f"({periodo})"):
+            titolo = f"{titolo} ({periodo})"
     
     # Estrazione dell'autore
     author_tag = soup.find('span', class_='author-art')
@@ -303,6 +305,25 @@ def main():
         
         filename = f"oroscopo_{tipo}_completo.xml"
         salva_rss(rss_content, filename)
+    
+    # Genera feed individuali per ogni segno
+    print(f"\n🎯 Generando feed individuali per ogni segno...")
+    for tipo in TIPOLOGIE.keys():
+        for segno in SEgni_ZODIACALI:
+            if tipo == "scheda":
+                url = f"{BASE_URL}/segni-zodiacali-caratteristiche/{segno}/"
+            else:
+                url = f"{BASE_URL}/{tipo}/{segno}/"
+            
+            print(f"  Scaricando {segno} ({tipo})...")
+            html = scarica_pagina(url)
+            
+            if html:
+                oroscopo = estrai_oroscopo(html, segno, tipo)
+                rss_content = genera_rss(oroscopo)
+                
+                filename = f"oroscopo_{tipo}_{segno}.xml"
+                salva_rss(rss_content, filename)
     
     print("\n" + "=" * 60)
     print("✅ Tutti i feed RSS sono stati generati con successo!")
