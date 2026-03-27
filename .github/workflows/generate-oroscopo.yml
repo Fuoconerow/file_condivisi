@@ -7,6 +7,10 @@ on:
   
   # Trigger: esecuzione manuale
   workflow_dispatch:
+  
+  # Trigger: push sul branch main
+  push:
+    branches: [ main ]
 
 permissions:
   contents: write
