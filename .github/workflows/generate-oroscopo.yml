@@ -9,8 +9,8 @@ on:
   workflow_dispatch:
   
   # Trigger: push sul branch main
-  #push:
-  #  branches: [ main ]
+  push:
+    branches: [ main ]
 
 permissions:
   contents: write
@@ -45,4 +45,4 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add feederss_files/script/rss_feeds/oroscopo_oggi_completo.xml
         git diff --staged --quiet || git commit -m "Aggiorna feed RSS oroscopo del giorno [skip ci]"
-        git push
+        git push origin main --force-with-lease
