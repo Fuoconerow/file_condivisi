@@ -7,10 +7,6 @@ on:
   
   # Trigger: esecuzione manuale
   workflow_dispatch:
-  
-  # Trigger: push sul branch main
-  #push:
-  #  branches: [ main ]
 
 permissions:
   contents: write
@@ -24,6 +20,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
     
     - name: Setup Python
       uses: actions/setup-python@v4
@@ -43,7 +40,9 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add feederss_files/script/rss_feeds/oroscopo_oggi_completo.xml
+        
+        # Aggiungi tutti i feed RSS generati
+        git add feederss_files/script/rss_feeds/
         git diff --staged --quiet || git commit -m "Aggiorna feed RSS oroscopo del giorno"
         
         # Crea o switcha al branch rss-feed
