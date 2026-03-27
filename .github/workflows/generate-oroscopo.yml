@@ -1,16 +1,16 @@
 name: Genera Oroscopo RSS
 
 on:
-  # Trigger: esegui ogni giorno alle 8:00 ora italiana (7:00 UTC)
+  # Trigger: esegui ogni giorno alle 6:00 ora italiana (5:00 UTC)
   schedule:
-    - cron: '0 7 * * *'
+    - cron: '0 5 * * *'
   
   # Trigger: esecuzione manuale
   workflow_dispatch:
   
   # Trigger: push sul branch main
   push:
-    branches: [ main, master ]
+    branches: [ main ]
 
 permissions:
   contents: write
