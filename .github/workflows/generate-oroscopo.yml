@@ -33,16 +33,16 @@ jobs:
     - name: Installa dipendenze
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r feederss_files/script/requirements.txt
     
     - name: Genera feed RSS
       run: |
-        python oroscopo_rss.py
+        cd feederss_files/script && python oroscopo_rss.py
     
     - name: Commit e push feed RSS
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add rss_feeds/oroscopo_oggi_completo.xml
+        git add feederss_files/script/rss_feeds/oroscopo_oggi_completo.xml
         git diff --staged --quiet || git commit -m "Aggiorna feed RSS oroscopo del giorno [skip ci]"
         git push
