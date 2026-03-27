@@ -21,6 +21,22 @@ SEgni_ZODIACALI = [
     "bilancia", "scorpione", "sagittario", "capricorno", "acquario", "pesci"
 ]
 
+# Periodi di nascita per ogni segno
+PERIODI_NASCITA = {
+    "ariete": "21/3 - 19/4",
+    "toro": "20/4 - 20/5",
+    "gemelli": "21/5 - 20/6",
+    "cancro": "21/6 - 22/7",
+    "leone": "23/7 - 22/8",
+    "vergine": "23/8 - 22/9",
+    "bilancia": "23/9 - 22/10",
+    "scorpione": "23/10 - 21/11",
+    "sagittario": "22/11 - 21/12",
+    "capricorno": "22/12 - 19/1",
+    "acquario": "20/1 - 18/2",
+    "pesci": "19/2 - 20/3"
+}
+
 # Tipologie di oroscopo (solo oggi)
 TIPOLOGIE = {
     "oggi": "oggi"
@@ -45,12 +61,24 @@ def estrai_oroscopo(html, segno, tipo):
     """Estrae i dati dell'oroscopo dall'HTML"""
     soup = BeautifulSoup(html, 'html.parser')
     
-    # Estrazione del titolo
-    title_tag = soup.find('h1', class_='title-art')
-    if title_tag:
-        titolo = title_tag.get_text(strip=True)
+    # Estrazione del titolo dal meta tag o title tag
+    title_tag = soup.find('meta', attrs={'itemprop': 'name'})
+    if title_tag and title_tag.get('content'):
+        titolo = title_tag.get('content')
     else:
-        titolo = f"Oroscopo {segno.capitalize()} - {tipo.capitalize()}"
+        # Fallback: cerca h1 con classe title-art
+        h1_tag = soup.find('h1', class_='title-art')
+        if h1_tag:
+            titolo = h1_tag.get_text(strip=True)
+        else:
+            # Ulteriore fallback: cerca title tag
+            title_tag = soup.find('title')
+            titolo = title_tag.get_text(strip=True) if title_tag else f"Oroscopo {segno.capitalize()} - {tipo.capitalize()}"
+    
+    # Aggiungi il periodo di nascita al titolo
+    periodo = PERIODI_NASCITA.get(segno, "")
+    if periodo and "(21/3 - 19/4)" not in titolo:  # Evita duplicati
+        titolo = f"{titolo} ({periodo})"
     
     # Estrazione dell'autore
     author_tag = soup.find('span', class_='author-art')
