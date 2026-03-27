@@ -7,7 +7,11 @@
     <language>it-IT</language>
     <copyright>Paolo Fox - Corriere della Sera</copyright>
     <pubDate>Fri, 27 Mar 2026 06:00:00 +0100</pubDate>
+<<<<<<< HEAD
     <lastBuildDate>Fri, 27 Mar 2026 09:33:54 </lastBuildDate>
+=======
+    <lastBuildDate>Fri, 27 Mar 2026 08:10:36 </lastBuildDate>
+>>>>>>> 9b40a701dfa2fd678c7b146b460ecf86b1fde3d6
     <ttl>300</ttl>
     <atom:link href="https://www.corriere.it/oroscopo/oggi/rss" rel="self" type="application/rss+xml"/>
     <image>
