@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Oroscopo Scorpione - Oggi</title>
     <description>Feed RSS per l'oroscopo oggi di Scorpione</description>
     <link>https://www.corriere.it/oroscopo/oggi/scorpione/</link>
     <language>it-it</language>
-    <lastBuildDate>Fri, 27 Mar 2026 10:55:31 </lastBuildDate>
+    <copyright>Paolo Fox - Corriere della Sera</copyright>
+    <lastBuildDate>Fri, 27 Mar 2026 12:13:26 </lastBuildDate>
+    <image>
+      <url>https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg</url>
+      <title>Oroscopo Scorpione</title>
+      <link>https://www.corriere.it/oroscopo/oggi/scorpione/</link>
+      <width>630</width>
+      <height>360</height>
+      <description>Oroscopo Scorpione del Corriere della Sera</description>
+    </image>
     <item>
       <title>Oroscopo Scorpione di oggi 27 marzo a cura di Paolo Fox (23/10 - 21/11)</title>
       <description><![CDATA[Approfitta di questo periodo, anche se recentemente ci sono stati problemi fisici o economici. Possibili questioni legate a rimborsi o pratiche da risolvere. L'inizio dell'anno è stato pesante, ma ora si va verso un miglioramento. Questa giornata offre forza grazie a configurazioni favorevoli. Anche nel lavoro le situazioni sospese possono essere gestite meglio.
@@ -13,7 +22,14 @@ RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
 Dopo settimane difficili, senti che qualcosa cambia in positivo. I contatti favoriscono opportunità di guadagno. Le difficoltà hanno richiesto resistenza, ma ora si riaprono possibilità. Nel lavoro riprendi in mano questioni lasciate in sospeso e trovi soluzioni concrete. Il dialogo torna centrale e porta nuove occasioni.]]></description>
       <link>https://www.corriere.it/oroscopo/oggi/scorpione/</link>
       <author>di Paolo Fox</author>
-      <pubDate>Fri, 27 Mar 2026 00:00:00 </pubDate>
+      <pubDate>Fri, 27 Mar 2026 06:00:05 +0100</pubDate>
+      <guid isPermaLink="true">https://www.corriere.it/oroscopo/oggi/scorpione/</guid>
+      <media:content url="https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg" type="image/jpg" expression="full" width="630" height="360">
+        <media:description type="plain"><![CDATA[ Oroscopo Scorpione di oggi 27 marzo a cura di Paolo Fox (23/10 - 21/11) ]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[ Approfitta di questo periodo, anche se recentemente ci sono stati problemi fisici o economici. Possibili questioni legate a rimborsi o pratiche da risolvere. L'inizio dell'anno è stato pesante, ma ora si va verso un miglioramento. Questa giornata offre forza grazie a configurazioni favorevoli. Anche nel lavoro le situazioni sospese possono essere gestite meglio.
+RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
+Dopo settimane difficili, senti che qualcosa cambia in positivo. I contatti favoriscono opportunità di guadagno. Le difficoltà hanno richiesto resistenza, ma ora si riaprono possibilità. Nel lavoro riprendi in mano questioni lasciate in sospeso e trovi soluzioni concrete. Il dialogo torna centrale e porta nuove occasioni. ]]></content:encoded>
     </item>
   </channel>
 </rss>

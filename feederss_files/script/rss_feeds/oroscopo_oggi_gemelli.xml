@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Oroscopo Gemelli - Oggi</title>
     <description>Feed RSS per l'oroscopo oggi di Gemelli</description>
     <link>https://www.corriere.it/oroscopo/oggi/gemelli/</link>
     <language>it-it</language>
-    <lastBuildDate>Fri, 27 Mar 2026 10:55:28 </lastBuildDate>
+    <copyright>Paolo Fox - Corriere della Sera</copyright>
+    <lastBuildDate>Fri, 27 Mar 2026 12:13:22 </lastBuildDate>
+    <image>
+      <url>https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg</url>
+      <title>Oroscopo Gemelli</title>
+      <link>https://www.corriere.it/oroscopo/oggi/gemelli/</link>
+      <width>630</width>
+      <height>360</height>
+      <description>Oroscopo Gemelli del Corriere della Sera</description>
+    </image>
     <item>
       <title>Oroscopo Gemelli di oggi 27 marzo a cura di Paolo Fox (21/5 - 20/6)</title>
       <description><![CDATA[Situazione particolare, segnata da un certo nervosismo già da ieri. Sulla carta c'è stata già una promessa, un cambiamento, ma nei fatti prima di fine giugno non si entrerà in gioco davvero. Forse avevi ricevuto promesse che non sono state mantenute. I ritardi creano tensione, cosa difficile da accettare per chi ama la rapidità. Anche oggi meglio evitare agitazioni inutili. Quando tutto rallenta, mantenere la calma diventa complicato.
@@ -13,7 +22,14 @@ RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
 Sei abituato ad agire velocemente e a ottenere risultati immediati, quindi ogni attesa pesa di più. In questi giorni alcune aspettative non trovano ancora una risposta chiara. Tuttavia, concentrarti su ciò che puoi controllare aiuta a ridurre la tensione. Oggi qualche spesa non prevista..]]></description>
       <link>https://www.corriere.it/oroscopo/oggi/gemelli/</link>
       <author>di Paolo Fox</author>
-      <pubDate>Fri, 27 Mar 2026 00:00:00 </pubDate>
+      <pubDate>Fri, 27 Mar 2026 06:00:10 +0100</pubDate>
+      <guid isPermaLink="true">https://www.corriere.it/oroscopo/oggi/gemelli/</guid>
+      <media:content url="https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg" type="image/jpg" expression="full" width="630" height="360">
+        <media:description type="plain"><![CDATA[ Oroscopo Gemelli di oggi 27 marzo a cura di Paolo Fox (21/5 - 20/6) ]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[ Situazione particolare, segnata da un certo nervosismo già da ieri. Sulla carta c'è stata già una promessa, un cambiamento, ma nei fatti prima di fine giugno non si entrerà in gioco davvero. Forse avevi ricevuto promesse che non sono state mantenute. I ritardi creano tensione, cosa difficile da accettare per chi ama la rapidità. Anche oggi meglio evitare agitazioni inutili. Quando tutto rallenta, mantenere la calma diventa complicato.
+RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
+Sei abituato ad agire velocemente e a ottenere risultati immediati, quindi ogni attesa pesa di più. In questi giorni alcune aspettative non trovano ancora una risposta chiara. Tuttavia, concentrarti su ciò che puoi controllare aiuta a ridurre la tensione. Oggi qualche spesa non prevista.. ]]></content:encoded>
     </item>
   </channel>
 </rss>

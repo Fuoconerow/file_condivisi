@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Oroscopo Bilancia - Oggi</title>
     <description>Feed RSS per l'oroscopo oggi di Bilancia</description>
     <link>https://www.corriere.it/oroscopo/oggi/bilancia/</link>
     <language>it-it</language>
-    <lastBuildDate>Fri, 27 Mar 2026 10:55:31 </lastBuildDate>
+    <copyright>Paolo Fox - Corriere della Sera</copyright>
+    <lastBuildDate>Fri, 27 Mar 2026 12:13:25 </lastBuildDate>
+    <image>
+      <url>https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg</url>
+      <title>Oroscopo Bilancia</title>
+      <link>https://www.corriere.it/oroscopo/oggi/bilancia/</link>
+      <width>630</width>
+      <height>360</height>
+      <description>Oroscopo Bilancia del Corriere della Sera</description>
+    </image>
     <item>
       <title>Oroscopo Bilancia di oggi 27 marzo a cura di Paolo Fox (23/9 - 22/10)</title>
       <description><![CDATA[Dal punto di vista astrologico cresce l’interesse per tutto ciò che è interiore e spirituale, utile a comprendere un disagio personale. Molti sono stati costretti a rivedere scelte. L’amore è uno dei punti più delicati: attenzione a non creare una distanza emotiva troppo grande. È come se cercassi un rilancio, oppure semplicemente più tempo da dedicare alla tua vita privata.
@@ -13,7 +22,14 @@ RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
 È un momento di introspezione. Eventi degli ultimi due anni hanno messo in discussione certezze consolidate. Devi capire cosa ti rende davvero sereno. Nei rapporti può emergere una distanza prima meno evidente. Dovrai decidere se ricostruire o trasformare certe dinamiche.]]></description>
       <link>https://www.corriere.it/oroscopo/oggi/bilancia/</link>
       <author>di Paolo Fox</author>
-      <pubDate>Fri, 27 Mar 2026 00:00:00 </pubDate>
+      <pubDate>Fri, 27 Mar 2026 06:00:06 +0100</pubDate>
+      <guid isPermaLink="true">https://www.corriere.it/oroscopo/oggi/bilancia/</guid>
+      <media:content url="https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg" type="image/jpg" expression="full" width="630" height="360">
+        <media:description type="plain"><![CDATA[ Oroscopo Bilancia di oggi 27 marzo a cura di Paolo Fox (23/9 - 22/10) ]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[ Dal punto di vista astrologico cresce l’interesse per tutto ciò che è interiore e spirituale, utile a comprendere un disagio personale. Molti sono stati costretti a rivedere scelte. L’amore è uno dei punti più delicati: attenzione a non creare una distanza emotiva troppo grande. È come se cercassi un rilancio, oppure semplicemente più tempo da dedicare alla tua vita privata.
+RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
+È un momento di introspezione. Eventi degli ultimi due anni hanno messo in discussione certezze consolidate. Devi capire cosa ti rende davvero sereno. Nei rapporti può emergere una distanza prima meno evidente. Dovrai decidere se ricostruire o trasformare certe dinamiche. ]]></content:encoded>
     </item>
   </channel>
 </rss>

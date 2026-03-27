@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Oroscopo Pesci - Oggi</title>
     <description>Feed RSS per l'oroscopo oggi di Pesci</description>
     <link>https://www.corriere.it/oroscopo/oggi/pesci/</link>
     <language>it-it</language>
-    <lastBuildDate>Fri, 27 Mar 2026 10:55:35 </lastBuildDate>
+    <copyright>Paolo Fox - Corriere della Sera</copyright>
+    <lastBuildDate>Fri, 27 Mar 2026 12:13:28 </lastBuildDate>
+    <image>
+      <url>https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg</url>
+      <title>Oroscopo Pesci</title>
+      <link>https://www.corriere.it/oroscopo/oggi/pesci/</link>
+      <width>630</width>
+      <height>360</height>
+      <description>Oroscopo Pesci del Corriere della Sera</description>
+    </image>
     <item>
       <title>Oroscopo Pesci di oggi 27 marzo a cura di Paolo Fox (19/2 - 20/3)</title>
       <description><![CDATA[È bene non lasciarsi sfuggire questo momento, la luna è favorevole con Giove, Mercurio e Marte nel segno. Una giornata significativa. Le configurazioni planetarie sono a favore. Potrebbe essere arrivata una buona notizia di recente. ChI lavora nell'arte, nello spettacolo o grazie alla creatività ha progetti in ballo. Tuttavia è fondamentale agire: non aspettare che tutto accada da solo. Osserva con attenzione ciò che ti circonda e muoviti con lucidità. Favoriti incontri e intuizioni utili.
@@ -13,7 +22,14 @@ RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
 Questo periodo unisce energia e intuizione in modo efficace. Le circostanze sono favorevoli, ma serve iniziativa. Non che tu non ne abbia, ma lo sai… Passi da giornate di pigrizia assoluta a giornate di frenesia sfrenata. Dovresti trovare una giusta via di mezzo. Agendo con consapevolezza, le opportunità diventano reali. Anche nei rapporti emergono occasioni interessanti. Le idee che stai sviluppando hanno potenziale e possono trasformarsi in progetti concreti prima di quanto tu possa immaginare.]]></description>
       <link>https://www.corriere.it/oroscopo/oggi/pesci/</link>
       <author>di Paolo Fox</author>
-      <pubDate>Fri, 27 Mar 2026 00:00:00 </pubDate>
+      <pubDate>Fri, 27 Mar 2026 06:00:01 +0100</pubDate>
+      <guid isPermaLink="true">https://www.corriere.it/oroscopo/oggi/pesci/</guid>
+      <media:content url="https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg" type="image/jpg" expression="full" width="630" height="360">
+        <media:description type="plain"><![CDATA[ Oroscopo Pesci di oggi 27 marzo a cura di Paolo Fox (19/2 - 20/3) ]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[ È bene non lasciarsi sfuggire questo momento, la luna è favorevole con Giove, Mercurio e Marte nel segno. Una giornata significativa. Le configurazioni planetarie sono a favore. Potrebbe essere arrivata una buona notizia di recente. ChI lavora nell'arte, nello spettacolo o grazie alla creatività ha progetti in ballo. Tuttavia è fondamentale agire: non aspettare che tutto accada da solo. Osserva con attenzione ciò che ti circonda e muoviti con lucidità. Favoriti incontri e intuizioni utili.
+RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
+Questo periodo unisce energia e intuizione in modo efficace. Le circostanze sono favorevoli, ma serve iniziativa. Non che tu non ne abbia, ma lo sai… Passi da giornate di pigrizia assoluta a giornate di frenesia sfrenata. Dovresti trovare una giusta via di mezzo. Agendo con consapevolezza, le opportunità diventano reali. Anche nei rapporti emergono occasioni interessanti. Le idee che stai sviluppando hanno potenziale e possono trasformarsi in progetti concreti prima di quanto tu possa immaginare. ]]></content:encoded>
     </item>
   </channel>
 </rss>

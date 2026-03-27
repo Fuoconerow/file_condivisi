@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Oroscopo Acquario - Oggi</title>
     <description>Feed RSS per l'oroscopo oggi di Acquario</description>
     <link>https://www.corriere.it/oroscopo/oggi/acquario/</link>
     <language>it-it</language>
-    <lastBuildDate>Fri, 27 Mar 2026 10:55:34 </lastBuildDate>
+    <copyright>Paolo Fox - Corriere della Sera</copyright>
+    <lastBuildDate>Fri, 27 Mar 2026 12:13:28 </lastBuildDate>
+    <image>
+      <url>https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg</url>
+      <title>Oroscopo Acquario</title>
+      <link>https://www.corriere.it/oroscopo/oggi/acquario/</link>
+      <width>630</width>
+      <height>360</height>
+      <description>Oroscopo Acquario del Corriere della Sera</description>
+    </image>
     <item>
       <title>Oroscopo Acquario di oggi 27 marzo a cura di Paolo Fox (20/1 - 18/2)</title>
       <description><![CDATA[Sei in una fase in cui tutto ciò che è vecchio o monotono non ti soddisfa. Non sorprende che tu senta il bisogno di iniziare a pensare a qualche novità. La seconda parte dell'anno sarà meno importante della prima, quindi qualsiasi progetto tu abbia in mente cerca di concluderlo entro fine giugno. Lo stress lavorativo o il desiderio di novità alimentano una sorta di ribellione contro la routine. Questo vale e varrà anche per l'amore.
@@ -13,7 +22,14 @@ RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
 Tutto ciò che è ripetitivo diventa difficile da tollerare. Questa insofferenza spinge a cercare nuove strade, soprattutto nel lavoro. Non è solo ribellione, ma una spinta creativa che vuole emergere. Le idee di ora possono trasformarsi in opportunità concrete.]]></description>
       <link>https://www.corriere.it/oroscopo/oggi/acquario/</link>
       <author>di Paolo Fox</author>
-      <pubDate>Fri, 27 Mar 2026 00:00:00 </pubDate>
+      <pubDate>Fri, 27 Mar 2026 06:00:02 +0100</pubDate>
+      <guid isPermaLink="true">https://www.corriere.it/oroscopo/oggi/acquario/</guid>
+      <media:content url="https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg" type="image/jpg" expression="full" width="630" height="360">
+        <media:description type="plain"><![CDATA[ Oroscopo Acquario di oggi 27 marzo a cura di Paolo Fox (20/1 - 18/2) ]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[ Sei in una fase in cui tutto ciò che è vecchio o monotono non ti soddisfa. Non sorprende che tu senta il bisogno di iniziare a pensare a qualche novità. La seconda parte dell'anno sarà meno importante della prima, quindi qualsiasi progetto tu abbia in mente cerca di concluderlo entro fine giugno. Lo stress lavorativo o il desiderio di novità alimentano una sorta di ribellione contro la routine. Questo vale e varrà anche per l'amore.
+RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
+Tutto ciò che è ripetitivo diventa difficile da tollerare. Questa insofferenza spinge a cercare nuove strade, soprattutto nel lavoro. Non è solo ribellione, ma una spinta creativa che vuole emergere. Le idee di ora possono trasformarsi in opportunità concrete. ]]></content:encoded>
     </item>
   </channel>
 </rss>

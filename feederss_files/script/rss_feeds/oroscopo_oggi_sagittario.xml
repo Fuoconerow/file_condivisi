@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Oroscopo Sagittario - Oggi</title>
     <description>Feed RSS per l'oroscopo oggi di Sagittario</description>
     <link>https://www.corriere.it/oroscopo/oggi/sagittario/</link>
     <language>it-it</language>
-    <lastBuildDate>Fri, 27 Mar 2026 10:55:32 </lastBuildDate>
+    <copyright>Paolo Fox - Corriere della Sera</copyright>
+    <lastBuildDate>Fri, 27 Mar 2026 12:13:26 </lastBuildDate>
+    <image>
+      <url>https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg</url>
+      <title>Oroscopo Sagittario</title>
+      <link>https://www.corriere.it/oroscopo/oggi/sagittario/</link>
+      <width>630</width>
+      <height>360</height>
+      <description>Oroscopo Sagittario del Corriere della Sera</description>
+    </image>
     <item>
       <title>Oroscopo Sagittario di oggi 27 marzo a cura di Paolo Fox (22/11 - 21/12)</title>
       <description><![CDATA[Tra i segni di fuoco sei quello che riceve più tardi le novità. Il cielo migliora soprattutto dal 20, con un Sole favorevole. Il fine settimana può rappresentare una svolta per amore e lavoro. Chi è solo dovrebbe guardarsi attorno: verso aprile aumentano le opportunità. Oggi il bilancio non è ancora completo, e con alcune tensioni planetarie non ti senti al massimo. Meglio non esagerare e restare fiducioso.
@@ -13,7 +22,14 @@ RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
 Stai attraversando una fase di passaggio. Il successo non manca, ma ci sono stati momenti imbarazzanti, complicati da gestire… Anche spese di troppo o malesseri. Nei rapporti torna il desiderio di novità. Gli incontri delle prossime settimane saranno importanti anche per il lavoro. Con pazienza, ciò che ora appare incerto diventerà più chiaro. Recenti disagi sono stati legati a spostamenti o comunicazioni.]]></description>
       <link>https://www.corriere.it/oroscopo/oggi/sagittario/</link>
       <author>di Paolo Fox</author>
-      <pubDate>Fri, 27 Mar 2026 00:00:00 </pubDate>
+      <pubDate>Fri, 27 Mar 2026 06:00:04 +0100</pubDate>
+      <guid isPermaLink="true">https://www.corriere.it/oroscopo/oggi/sagittario/</guid>
+      <media:content url="https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg" type="image/jpg" expression="full" width="630" height="360">
+        <media:description type="plain"><![CDATA[ Oroscopo Sagittario di oggi 27 marzo a cura di Paolo Fox (22/11 - 21/12) ]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[ Tra i segni di fuoco sei quello che riceve più tardi le novità. Il cielo migliora soprattutto dal 20, con un Sole favorevole. Il fine settimana può rappresentare una svolta per amore e lavoro. Chi è solo dovrebbe guardarsi attorno: verso aprile aumentano le opportunità. Oggi il bilancio non è ancora completo, e con alcune tensioni planetarie non ti senti al massimo. Meglio non esagerare e restare fiducioso.
+RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
+Stai attraversando una fase di passaggio. Il successo non manca, ma ci sono stati momenti imbarazzanti, complicati da gestire… Anche spese di troppo o malesseri. Nei rapporti torna il desiderio di novità. Gli incontri delle prossime settimane saranno importanti anche per il lavoro. Con pazienza, ciò che ora appare incerto diventerà più chiaro. Recenti disagi sono stati legati a spostamenti o comunicazioni. ]]></content:encoded>
     </item>
   </channel>
 </rss>

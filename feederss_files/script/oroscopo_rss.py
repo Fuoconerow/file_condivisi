@@ -164,7 +164,13 @@ def estrai_oroscopo(html, segno, tipo):
 
 def genera_rss(oroscopo_data):
     """Genera XML RSS dai dati dell'oroscopo"""
-    rss = etree.Element('rss', version='2.0')
+    # Namespace per supportare le immagini
+    nsmap = {
+        'media': 'http://search.yahoo.com/mrss/',
+        'content': 'http://purl.org/rss/1.0/modules/content/'
+    }
+    
+    rss = etree.Element('rss', version='2.0', nsmap=nsmap)
     channel = etree.SubElement(rss, 'channel')
     
     # Informazioni del canale
@@ -172,7 +178,36 @@ def genera_rss(oroscopo_data):
     etree.SubElement(channel, 'description').text = f"Feed RSS per l'oroscopo {oroscopo_data['tipo']} di {oroscopo_data['segno'].capitalize()}"
     etree.SubElement(channel, 'link').text = oroscopo_data['url']
     etree.SubElement(channel, 'language').text = 'it-it'
+    etree.SubElement(channel, 'copyright').text = "Paolo Fox - Corriere della Sera"
     etree.SubElement(channel, 'lastBuildDate').text = datetime.now().strftime("%a, %d %b %Y %H:%M:%S %z")
+    
+    # Image del channel
+    image = etree.SubElement(channel, 'image')
+    etree.SubElement(image, 'url').text = oroscopo_data['immagine']
+    etree.SubElement(image, 'title').text = f"Oroscopo {oroscopo_data['segno'].capitalize()}"
+    etree.SubElement(image, 'link').text = oroscopo_data['url']
+    etree.SubElement(image, 'width').text = "630"
+    etree.SubElement(image, 'height').text = "360"
+    etree.SubElement(image, 'description').text = f"Oroscopo {oroscopo_data['segno'].capitalize()} del Corriere della Sera"
+    
+    # Mappa dei secondi per ogni segno zodiacale
+    SECONDI_PER_SEGNO = {
+        "ariete": 12,
+        "toro": 11,
+        "gemelli": 10,
+        "cancro": 9,
+        "leone": 8,
+        "vergine": 7,
+        "bilancia": 6,
+        "scorpione": 5,
+        "sagittario": 4,
+        "capricorno": 3,
+        "acquario": 2,
+        "pesci": 1
+    }
+    
+    # Ottieni i secondi per questo segno
+    secondi = SECONDI_PER_SEGNO[oroscopo_data['segno']]
     
     # Item (articolo)
     item = etree.SubElement(channel, 'item')
@@ -184,7 +219,30 @@ def genera_rss(oroscopo_data):
     
     etree.SubElement(item, 'link').text = oroscopo_data['url']
     etree.SubElement(item, 'author').text = oroscopo_data['autore']
-    etree.SubElement(item, 'pubDate').text = datetime.strptime(oroscopo_data['data'], "%Y-%m-%d").strftime("%a, %d %b %Y %H:%M:%S %z")
+    # Aggiungi i secondi per ordinare correttamente quando mostrati in ordine inverso
+    etree.SubElement(item, 'pubDate').text = datetime.strptime(oroscopo_data['data'], "%Y-%m-%d").strftime(f"%a, %d %b %Y 06:00:{secondi:02d} +0100")
+    
+    # GUID
+    guid = etree.SubElement(item, 'guid')
+    guid.set('isPermaLink', 'true')
+    guid.text = oroscopo_data['url']
+    
+    # media:content per l'immagine
+    media_content = etree.SubElement(item, '{http://search.yahoo.com/mrss/}content')
+    media_content.set('url', oroscopo_data['immagine'])
+    media_content.set('type', 'image/jpg')
+    media_content.set('expression', 'full')
+    media_content.set('width', '630')
+    media_content.set('height', '360')
+    
+    # media:description
+    media_description = etree.SubElement(media_content, '{http://search.yahoo.com/mrss/}description')
+    media_description.set('type', 'plain')
+    media_description.text = etree.CDATA(f" {oroscopo_data['titolo']} ")
+    
+    # content:encoded per il contenuto completo
+    content_encoded = etree.SubElement(item, '{http://purl.org/rss/1.0/modules/content/}encoded')
+    content_encoded.text = etree.CDATA(f" {oroscopo_data['contenuto']} ")
     
     # Pretty print XML con lxml
     xml_str = '<?xml version="1.0" encoding="utf-8"?>\n' + etree.tostring(rss, pretty_print=True, encoding='unicode')
@@ -237,6 +295,22 @@ def genera_feed_completo(tipo):
     etree.SubElement(image, 'height').text = "320"
     etree.SubElement(image, 'description').text = "Oroscopo del Corriere della Sera"
     
+    # Mappa dei secondi per ogni segno zodiacale (per ordinamento inverso cronologico)
+    SECONDI_PER_SEGNO = {
+        "ariete": 12,
+        "toro": 11,
+        "gemelli": 10,
+        "cancro": 9,
+        "leone": 8,
+        "vergine": 7,
+        "bilancia": 6,
+        "scorpione": 5,
+        "sagittario": 4,
+        "capricorno": 3,
+        "acquario": 2,
+        "pesci": 1
+    }
+    
     # Aggiungi item per ogni segno
     for segno in SEgni_ZODIACALI:
         if tipo == "scheda":
@@ -244,7 +318,10 @@ def genera_feed_completo(tipo):
         else:
             url = f"{BASE_URL}/{tipo}/{segno}/"
         
-        print(f"  Scaricando {segno} ({tipo})...")
+        # Ottieni i secondi per questo segno
+        secondi = SECONDI_PER_SEGNO[segno]
+        print(f"  Scaricando {segno} ({tipo}) con {secondi} secondi...")
+        
         html = scarica_pagina(url)
         
         if html:
@@ -260,7 +337,8 @@ def genera_feed_completo(tipo):
             
             etree.SubElement(item, 'link').text = oroscopo['url']
             etree.SubElement(item, 'author').text = oroscopo['autore']
-            etree.SubElement(item, 'pubDate').text = datetime.strptime(oroscopo['data'], "%Y-%m-%d").strftime("%a, %d %b %Y 06:00:00 +0100")
+            # Aggiungi i secondi per ordinare correttamente quando mostrati in ordine inverso
+            etree.SubElement(item, 'pubDate').text = datetime.strptime(oroscopo['data'], "%Y-%m-%d").strftime(f"%a, %d %b %Y 06:00:{secondi:02d} +0100")
             etree.SubElement(item, 'category').text = segno.capitalize()
             
             # GUID

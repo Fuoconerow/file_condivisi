@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Oroscopo Cancro - Oggi</title>
     <description>Feed RSS per l'oroscopo oggi di Cancro</description>
     <link>https://www.corriere.it/oroscopo/oggi/cancro/</link>
     <language>it-it</language>
-    <lastBuildDate>Fri, 27 Mar 2026 10:55:28 </lastBuildDate>
+    <copyright>Paolo Fox - Corriere della Sera</copyright>
+    <lastBuildDate>Fri, 27 Mar 2026 12:13:23 </lastBuildDate>
+    <image>
+      <url>https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg</url>
+      <title>Oroscopo Cancro</title>
+      <link>https://www.corriere.it/oroscopo/oggi/cancro/</link>
+      <width>630</width>
+      <height>360</height>
+      <description>Oroscopo Cancro del Corriere della Sera</description>
+    </image>
     <item>
       <title>Oroscopo Cancro di oggi 27 marzo a cura di Paolo Fox (21/6 - 22/7)</title>
       <description><![CDATA[Mercurio resta attivo e Giove nel segno offre ancora una grande spinta nel lavoro. Questo è il momento ideale per pianificare e impostare strategie per i mesi futuri. Saturno dissonante parla di abbandono di un ruolo, di una presa di posizione netta, soprattutto nel lavoro ma solo se non ti sta bene qualcosa o per solidarietà con una persona. È una cosa a cui stai pensando già da metà febbraio… L’amore richiede attenzione: le coppie che hanno rimandato confronti potrebbero vivere uno stallo. Tuttavia, aprile permetterà, a chi lo desidera, una riconciliazione..
@@ -13,7 +22,14 @@ RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
 La situazione professionale cambia, potresti dire anche tu basta. Hai la possibilità di definire obiettivi più ambiziosi e organizzare meglio il tuo percorso. Tuttavia, l’attenzione per le questioni pratiche può mettere in secondo piano i sentimenti. Rimandare troppo un confronto aumenta la distanza tra le persone.]]></description>
       <link>https://www.corriere.it/oroscopo/oggi/cancro/</link>
       <author>di Paolo Fox</author>
-      <pubDate>Fri, 27 Mar 2026 00:00:00 </pubDate>
+      <pubDate>Fri, 27 Mar 2026 06:00:09 +0100</pubDate>
+      <guid isPermaLink="true">https://www.corriere.it/oroscopo/oggi/cancro/</guid>
+      <media:content url="https://components.corriereobjects.it/rcs_cor_corriere-layout/v2/assets/img/ext/oroscopo/sfondi/sfondo-hero.jpg" type="image/jpg" expression="full" width="630" height="360">
+        <media:description type="plain"><![CDATA[ Oroscopo Cancro di oggi 27 marzo a cura di Paolo Fox (21/6 - 22/7) ]]></media:description>
+      </media:content>
+      <content:encoded><![CDATA[ Mercurio resta attivo e Giove nel segno offre ancora una grande spinta nel lavoro. Questo è il momento ideale per pianificare e impostare strategie per i mesi futuri. Saturno dissonante parla di abbandono di un ruolo, di una presa di posizione netta, soprattutto nel lavoro ma solo se non ti sta bene qualcosa o per solidarietà con una persona. È una cosa a cui stai pensando già da metà febbraio… L’amore richiede attenzione: le coppie che hanno rimandato confronti potrebbero vivere uno stallo. Tuttavia, aprile permetterà, a chi lo desidera, una riconciliazione..
+RIFLESSIONI E UN APPROFONDIMENTO SUL CIELO DI OGGI:
+La situazione professionale cambia, potresti dire anche tu basta. Hai la possibilità di definire obiettivi più ambiziosi e organizzare meglio il tuo percorso. Tuttavia, l’attenzione per le questioni pratiche può mettere in secondo piano i sentimenti. Rimandare troppo un confronto aumenta la distanza tra le persone. ]]></content:encoded>
     </item>
   </channel>
 </rss>
