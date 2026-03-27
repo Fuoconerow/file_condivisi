@@ -49,7 +49,6 @@ jobs:
         git add feederss_files/script/rss_feeds/
         git diff --staged --quiet || git commit -m "Aggiorna feed RSS oroscopo del giorno"
         
-        # Crea o switcha al branch rss-feed
+        # Crea o switcha al branch rss-feed e forza il push
         git checkout -b rss-feed || git checkout rss-feed
-        git pull --rebase origin rss-feed || true
-        git push origin rss-feed
+        git push origin rss-feed --force
